@@ -29,16 +29,34 @@ const exampleTwo = {
   }
 };
 
-it("is cool when you don't depending on a commit SHA", () => {
-  const opts = {
-    repos: ['typographyverse', 'chromatose']
-  }
-  expect(semverify(exampleOne, opts)).to.be.true;
+describe('specifying repos directly', () => {
+  it("is cool when you don't depending on a commit SHA", () => {
+    const opts = {
+      repos: ['typographyverse', 'chromatose']
+    }
+    expect(semverify(exampleOne, opts)).to.be.true;
+  });
+
+  it("calls you out when you depend on commit SHAs", () => {
+    const opts = {
+      repos: ['typographyverse', 'chromatose']
+    }
+    expect(semverify(exampleTwo, opts)).to.be.false;
+  });
 });
 
-it("calls you out when you depend on commit SHAs", () => {
-  const opts = {
-    repos: ['typographyverse', 'chromatose']
-  }
-  expect(semverify(exampleTwo, opts)).to.be.false;
+describe('specifying repos with a pattern', () => {
+  it("is cool when you don't depending on a commit SHA", () => {
+    const opts = {
+      includeOwner: ['the-grid']
+    }
+    expect(semverify(exampleOne, opts)).to.be.true;
+  });
+
+  it("calls you out when you depend on commit SHAs", () => {
+    const opts = {
+      includeOwner: ['the-grid']
+    }
+    expect(semverify(exampleTwo, opts)).to.be.false;
+  });
 });
