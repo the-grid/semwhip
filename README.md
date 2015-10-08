@@ -7,7 +7,7 @@ WIP - validates your package.json for versioned dependencies
 Validates dependencies based on either an array of owner (user/organization)
 names, or an array of repo names.
 
-```
+```js
 const pkg = require('./package.json');
 // {
 //   name: "My Repo",
