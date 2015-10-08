@@ -1,0 +1,19 @@
+{
+  "name": "semverify",
+  "version": "0.1.0",
+  "description": "pleaaaaase stop depending on commit SHAs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --compilers js:babel/register"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.23"
+  },
+  "dependencies": {
+    "chai": "^3.3.0",
+    "ramda": "^0.17.1",
+    "semver": "^5.0.3"
+  }
+}
