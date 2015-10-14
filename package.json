@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "description": "pleaaaaase stop depending on commit SHAs",
   "main": "index.js",
+  "author": "Jon Gold",
   "scripts": {
     "test": "mocha --recursive --compilers js:babel/register"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel": "^5.8.23",
     "chai": "^3.3.0"
