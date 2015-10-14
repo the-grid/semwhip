@@ -1,4 +1,4 @@
-# semverify
+# semwhip
 
 WIP - validates your package.json for versioned dependencies
 
@@ -33,5 +33,5 @@ options = {
   includeOwner: ['the-grid']
 }
 
-semverify(pkg, options);
+semwhip(pkg, options);
 ```

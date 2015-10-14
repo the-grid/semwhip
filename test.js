@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import semverify from './index.js';
+import semwhip from './index.js';
 
 const exampleOne = {
   name: "passing",
@@ -34,14 +34,14 @@ describe('specifying repos directly', () => {
     const opts = {
       repos: ['typographyverse', 'chromatose']
     }
-    expect(semverify(exampleOne, opts)).to.be.true;
+    expect(semwhip(exampleOne, opts)).to.be.true;
   });
 
   it("calls you out when you depend on commit SHAs", () => {
     const opts = {
       repos: ['typographyverse', 'chromatose']
     }
-    expect(semverify(exampleTwo, opts)).to.be.false;
+    expect(semwhip(exampleTwo, opts)).to.be.false;
   });
 });
 
@@ -50,13 +50,13 @@ describe('specifying repos with a pattern', () => {
     const opts = {
       includeOwner: ['the-grid']
     }
-    expect(semverify(exampleOne, opts)).to.be.true;
+    expect(semwhip(exampleOne, opts)).to.be.true;
   });
 
   it("calls you out when you depend on commit SHAs", () => {
     const opts = {
       includeOwner: ['the-grid']
     }
-    expect(semverify(exampleTwo, opts)).to.be.false;
+    expect(semwhip(exampleTwo, opts)).to.be.false;
   });
 });

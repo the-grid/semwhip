@@ -18,7 +18,7 @@ const filterURLs = (opts) => {
 }
 
 
-export default function semverify(pkg, opts) {
+export default function semwhip(pkg, opts) {
   const f = cond([
     [has('includeOwner'), filterURLs],
     [has('repos'),   (opts) => pick(prop('repos', opts))],

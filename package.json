@@ -1,5 +1,5 @@
 {
-  "name": "semverify",
+  "name": "semwhip",
   "version": "0.1.0",
   "description": "pleaaaaase stop depending on commit SHAs",
   "main": "index.js",
